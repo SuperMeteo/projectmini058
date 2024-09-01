@@ -6,7 +6,6 @@ export default function HistoryPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-
   useEffect(() => {
     async function fetchData() {
       try {
@@ -26,14 +25,14 @@ export default function HistoryPage() {
     fetchData();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="text-center text-info">Loading...</p>;
+  if (error) return <p className="text-center text-danger">Error: {error}</p>;
 
   return (
-    <div className="container my-5">
-      <h1 className="text-center mb-4">Sensor Data History</h1>
-      <div className="table-responsive">
-        <table className="table table-striped table-bordered">
+    <div className="container my-5 text-white">
+      <h1 className="text-center mb-4 display-4">Sensor Data History</h1>
+      <div className="table-responsive shadow-lg p-3 mb-5 bg-dark rounded">
+        <table className="table table-hover table-bordered table-striped text-center">
           <thead className="thead-dark">
             <tr>
               <th>ID</th>

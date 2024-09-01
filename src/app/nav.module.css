@@ -11,13 +11,23 @@
 
 /* Custom Button */
 .btnCustom {
-  background-color: #0a74da; /* Primary Blue */
+  background-color: #80da0a; /* Primary Blue */
 }
 
 .btnCustom:hover {
-  background-color: #0096ff;
-  border-color: #0096ff; /* Border color on hover */
-  box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+  background-color: #06ec66;
+  border-color: #04f538; /* Border color on hover */
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.7);
+}
+
+.btnwarning {
+  background-color: #eeff00; /* Primary Blue */
+}
+
+.btnwarning:hover {
+  background-color: #e5ff00;
+  border-color: #d1f504; /* Border color on hover */
+  box-shadow: 0 0 15px rgb(194, 247, 5);
 }
 
 .btnCustom:active {

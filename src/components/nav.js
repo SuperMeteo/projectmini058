@@ -70,21 +70,31 @@ const Navbar = () => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className={`nav-link ${styles.navLink}`} href="/History">History</Link>
-            </li>
-          </ul>
-          <form className="d-flex align-items-center me-5">
-  <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
-  <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>Buzzer</button>
-  <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
+        <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+  <ul className="navbar-nav d-flex align-items-center ">
+    <li className="nav-item">
+      <Link className={`nav-link ${styles.navLink}`} href="/History"></Link>
+    </li>
+  </ul>
+  <form className="me-auto ms-auto mb-2 mb-lg-0">
+    <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
+    <button type="button" className={`btn ${styles.btnwarning} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>Buzzer</button>
+    <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
+    
+  </form>
+  <ul className="navbar-nav d-flex align-items-center ">
   <span className={`ms-3 ${ledStatus ? styles.statusOn : styles.statusOff}`}>
-    {ledStatus ? 'LED is ON' : 'LED is OFF'}
-  </span>
-</form>
-
+      {ledStatus ? 'LED is ON' : 'LED is OFF'}
+    </span>
+    <li className="nav-item">
+      <Link className={`nav-link ${styles.navLink} me-2`} href="/History"></Link>
+    </li>
+    <li className="nav-item">
+      <Link className={`nav-link ${styles.navLink} me-2`} href="/History">History</Link>
+    </li>
+    
+ 
+  </ul>
 
         </div>
       </div>
