@@ -71,16 +71,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className={`nav-link ${styles.navLink}`} href="./">Dashboard</Link>
-            </li>
-            <li className="nav-item">
               <Link className={`nav-link ${styles.navLink}`} href="/History">History</Link>
             </li>
           </ul>
           <form className="d-flex align-items-center">
-            <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>Open System</button>
+            <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
             <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>Buzzer</button>
-            <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>Off</button>
+            <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
             <span className={`ms-3 ${ledStatus ? styles.statusOn : styles.statusOff}`}>
               {ledStatus ? 'LED is ON' : 'LED is OFF'}
             </span>
