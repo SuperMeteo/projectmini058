@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from '../app/nav.module.css';
 import Logo from '../../public/logo.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../app/globals.css';
 
 const notifyUser = (command) => {
   alert(`Command ${command} sent to the board successfully.`);
@@ -74,14 +76,16 @@ const Navbar = () => {
               <Link className={`nav-link ${styles.navLink}`} href="/History">History</Link>
             </li>
           </ul>
-          <form className="d-flex align-items-center">
-            <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
-            <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>Buzzer</button>
-            <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
-            <span className={`ms-3 ${ledStatus ? styles.statusOn : styles.statusOff}`}>
-              {ledStatus ? 'LED is ON' : 'LED is OFF'}
-            </span>
-          </form>
+          <form className="d-flex align-items-center me-5">
+  <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
+  <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>Buzzer</button>
+  <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
+  <span className={`ms-3 ${ledStatus ? styles.statusOn : styles.statusOff}`}>
+    {ledStatus ? 'LED is ON' : 'LED is OFF'}
+  </span>
+</form>
+
+
         </div>
       </div>
     </nav>
