@@ -200,7 +200,7 @@ export default function Dashboard() {
   return (
     <div className={`${styles.dashboard} container`}>
       <h1 className={`${styles.heading} text-center my-4`}>
-        Dashboard
+        Home
       </h1>
       <ul className="nav nav-tabs" id="chartTabs" role="tablist">
         <li className="nav-item" role="presentation">
