@@ -82,7 +82,7 @@ const Navbar = () => {
   </ul>
   <form className="me-auto ms-auto mb-5 mb-lg-0">
     <button type="button" className={`btn ${styles.btnCustom} me-2`} onClick={() => updateLEDStatus('RGB_ON', setLEDStatus)}>OPEN RGB</button>
-    <button type="button" className={`btn ${styles.btnwarning} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}></button>
+    <button type="button" className={`btn ${styles.btnwarning} me-2`} onClick={() => updateLEDStatus('BUZZER_ON', setLEDStatus)}>BUZZER</button>
     <button type="button" className={`btn ${styles.btnDanger}`} onClick={() => updateLEDStatus('OFF', setLEDStatus)}>OFF</button>
     
   </form>
